@@ -103,3 +103,30 @@ select * from tb_livro;
 select * from tb_livro
 where preco > 300;
 
+-- comando de DDL
+-- adicionar campo
+
+alter table tb_livro
+add nota int;
+
+select * from tb_livro;
+
+-- modificar o campo
+-- drop
+
+alter table tb_livro
+modify column nota char(50);
+
+alter table tb_livro
+drop column nota;
+
+-- criar tablea tb_teste
+
+create table tb_teste
+(cd_teste int not null primary key,
+teste char (30));
+
+-- excluir o campo
+
+drop table tb_teste;
+
