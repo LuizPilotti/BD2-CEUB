@@ -130,3 +130,31 @@ teste char (30));
 
 drop table tb_teste;
 
+-- backup -- restore 
+--  1 Incluir nutricao
+use bd_livro_0301;
+select * from tb_genero;
+
+-- tb_genero 9 para nutricao
+insert into tb_genero
+(cd_genero,genero)
+values
+(9, 'Nutricao');
+select * from tb_genero
+
+
+
+--  2 Alterar o valor e cd_editora do tb_livro quando 
+-- isbn = 2 para cd_editora 2 e valor R$500
+select * from tb_livro;
+
+update tb_livro
+set preco = 500, cd_editora = 2
+where isbn = 2;
+
+--  3 Atualizar o valor da comissão em 10% do valor da venda
+
+select * from tb_livro;
+update tb_livro
+set preco = preco * 1.1
+where isbn < 20;
